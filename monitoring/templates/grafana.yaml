@@ -12,7 +12,7 @@ spec:
     targetRevision: HEAD
     path: charts/grafana
   destination:
-    server: {{ .Values.spec.destination.server }}
+    server: {{ .Values.spec.grafana.source }}
     namespace: monitoring
   syncPolicy:
     automated:
