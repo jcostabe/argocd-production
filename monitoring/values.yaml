@@ -1,3 +1,5 @@
+namespace: monitoring
+
 spec:
     destination:
         server: https://kubernetes.default.svc

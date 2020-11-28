@@ -17,8 +17,12 @@ spec:
   - namespace: production
     server: https://kubernetes.default.svc
   clusterResourceWhitelist:
-  - group: ''
-    kind: Namespace
+  - group: 'policy'
+    kind: PodSecurityPolicy
+  - group: 'rbac.authorization.k8s.io'
+    kind: ClusterRole
+  - group: 'rbac.authorization.k8s.io'
+    kind: ClusterRoleBinding
   namespaceResourceBlacklist:
   - group: ''
     kind: ResourceQuota
@@ -41,3 +45,11 @@ spec:
     kind: Service
   - group: ''
     kind: ConfigMap
+  - group: ''
+    kind: ServiceAccount
+  - group: ''
+    kind: Secret
+  - group: 'rbac.authorization.k8s.io'
+    kind: Role
+  - group: 'rbac.authorization.k8s.io'
+    kind: RoleBinding
