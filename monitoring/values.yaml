@@ -1,0 +1,9 @@
+spec:
+    destination:
+        server: https://kubernetes.default.svc
+    grafana:
+        source: https://github.com/grafana/helm-charts
+    prometheus:
+        source: https://github.com/prometheus-community/helm-charts
+
+
