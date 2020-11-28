@@ -1,0 +1,7 @@
+namespace: production
+
+spec:
+    destination:
+        server: https://kubernetes.default.svc
+    mongodb:
+        source: https://github.com/jcostabe/gitops-demo
