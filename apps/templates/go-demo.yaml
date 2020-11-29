@@ -8,7 +8,7 @@ metadata:
 spec:
   project: production
   source:
-    repoURL: {{ .Values.spec.mongodb.source }}
+    repoURL: {{ .Values.spec.gitops.source }}
     targetRevision: HEAD
     path: application-manifests/go-demo
   destination:
