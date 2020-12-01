@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: applications
+  name: opa-gatekeeper
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: production
+  project: controllers
   source:
-    repoURL: https://github.com/jcostabe/argocd-production
+    repoURL: {{ .Values.spec.gitops.source }}
     targetRevision: HEAD
-    path: apps
+    path: controller-manifests/opa-gatekeeper
   destination:
-    server: https://kubernetes.default.svc
-    namespace: production
+    server: {{ .Values.spec.destination.server }}
+    namespace: gatekeeper-system
   syncPolicy:
     automated:
       selfHeal: true

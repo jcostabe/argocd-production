@@ -1,0 +1,10 @@
+namespace: gatekeeper-system
+
+spec:
+    destination:
+        server: https://kubernetes.default.svc
+    gitops:
+        source: https://github.com/grafana/helm-charts
+    
+
+
