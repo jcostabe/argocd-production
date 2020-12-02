@@ -4,7 +4,7 @@ spec:
     destination:
         server: https://kubernetes.default.svc
     gitops:
-        source: https://github.com/grafana/helm-charts
+        source: https://github.com/jcostabe/gitops-demo
     
 
 
