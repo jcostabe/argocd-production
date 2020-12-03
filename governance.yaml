@@ -8,7 +8,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: governance-project
+  project: governance
   source:
     repoURL: https://github.com/jcostabe/argocd-production
     targetRevision: HEAD
