@@ -1,0 +1,22 @@
+### TODO
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: policies
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: governance-project
+  source:
+    repoURL: https://github.com/jcostabe/argocd-production
+    targetRevision: HEAD
+    path: policies
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: production
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
