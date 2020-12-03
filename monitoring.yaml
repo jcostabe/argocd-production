@@ -6,7 +6,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: production
+  project: controllers
   source:
     repoURL: https://github.com/jcostabe/argocd-production
     targetRevision: HEAD
